@@ -26,10 +26,14 @@ export default function Hero() {
             <Button href="#projects">
               View Projects
             </Button>
-
-            <Button href={profile.resume} variant="secondary">
-                Resume
-            </Button>
+           <Button
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="secondary"
+        >
+          Resume
+        </Button>
           </div>
 
           <div className="mt-10 flex gap-3">

@@ -1,3 +1,4 @@
+import logo from "../../assets/logo.png";
 import { Container } from "../common/Container";
 
 const navItems = [
@@ -16,9 +17,13 @@ export function Navbar() {
           href="#home"
           className="flex items-center gap-3 transition-opacity hover:opacity-80"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-700 bg-zinc-900 font-bold text-cyan-400">
-            DK
-          </div>
+          <div className="flex items-center gap-3">
+        <img
+            src={logo}
+            alt="Dhruvin Kamani"
+            className="h-10 w-10 rounded-xl"
+        />   
+        </div>
 
           <div className="hidden sm:block">
             <p className="font-semibold text-white">Dhruvin Kamani</p>
