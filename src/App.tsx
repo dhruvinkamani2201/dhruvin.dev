@@ -4,6 +4,7 @@ import Highlights from "./sections/Highlights";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import TechnologyStack from "./sections/TechnologyStack";
+import Credentials from "./sections/Credentials";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Experience />
       <Projects />
       <TechnologyStack />
+      <Credentials />
     </main>
   );
 }
