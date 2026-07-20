@@ -6,6 +6,7 @@ export interface Experience {
   location: string;
   technologies: string[];
   achievements: string[];
+  logo?: string;
 }
 
 export const experiences: Experience[] = [

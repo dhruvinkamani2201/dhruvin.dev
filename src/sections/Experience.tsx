@@ -1,6 +1,6 @@
 import { Container } from "../components/common/Container";
 import { SectionHeading } from "../components/common/SectionHeading";
-import { ExperienceCard } from "../components/ui/ExperienceCard";
+import { TimelineItem } from "../components/ui/TimelineItem";
 import { experiences } from "../data/experience";
 
 export default function Experience() {
@@ -13,13 +13,13 @@ export default function Experience() {
           description="Building enterprise software across healthcare, entertainment, insurance, and manufacturing."
         />
 
-        <div className="space-y-8">
-          {experiences.map((experience) => (
-            <ExperienceCard
-              key={`${experience.employer}-${experience.client ?? experience.role}`}
-              experience={experience}
+        <div className="mt-16">
+        {experiences.map((experience) => (
+            <TimelineItem
+            key={`${experience.employer}-${experience.client ?? experience.role}`}
+            experience={experience}
             />
-          ))}
+        ))}
         </div>
       </Container>
     </section>
