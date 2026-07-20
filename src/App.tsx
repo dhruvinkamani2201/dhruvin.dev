@@ -2,6 +2,8 @@ import { Navbar } from "./components/layout/Navbar";
 import Hero from "./sections/Hero";
 import Highlights from "./sections/Highlights";
 import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import TechnologyStack from "./sections/TechnologyStack";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Hero />
       <Highlights />
       <Experience />
+      <Projects />
+      <TechnologyStack />
     </main>
   );
 }
