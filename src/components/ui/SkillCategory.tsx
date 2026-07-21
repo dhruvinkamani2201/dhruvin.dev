@@ -1,26 +1,28 @@
-import type { SkillCategory as SkillCategoryType } from "../../data/skills";
-
 interface Props {
-  category: SkillCategoryType;
+  category: string;
+  items: string[];
 }
 
-export function SkillCategory({ category }: Props) {
+export default function SkillCategory({
+  category,
+  items,
+}: Props) {
   return (
-    <article className="rounded-2xl border border-zinc-800 bg-zinc-900 p-8">
+    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8">
       <h3 className="mb-6 text-xl font-semibold text-white">
-        {category.title}
+        {category}
       </h3>
 
       <div className="flex flex-wrap gap-3">
-        {category.skills.map((skill) => (
+        {items.map((item) => (
           <span
-            key={skill}
-            className="rounded-full border border-cyan-500/30 px-4 py-2 text-sm text-cyan-300"
+            key={item}
+            className="rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-300 transition hover:border-cyan-400 hover:text-cyan-400"
           >
-            {skill}
+            {item}
           </span>
         ))}
       </div>
-    </article>
+    </div>
   );
 }

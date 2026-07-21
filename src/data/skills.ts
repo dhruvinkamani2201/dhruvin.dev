@@ -1,67 +1,58 @@
-export interface SkillCategory {
-  title: string;
-  skills: string[];
-}
-
-export const skillCategories: SkillCategory[] = [
+export const skills = [
   {
-    title: "Languages",
-    skills: [
+    category: "Languages",
+    items: [
       "C#",
+      ".NET",
       "Python",
+      "Java",
       "TypeScript",
       "JavaScript",
-      "Java",
       "SQL",
+      "C++",
     ],
   },
   {
-    title: "Backend",
-    skills: [
-      ".NET",
-      ".NET Core",
-      "ASP.NET",
+    category: "Frontend",
+    items: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      "ASP.NET Core",
       "REST APIs",
+      "Entity Framework",
       "Node.js",
       "NestJS",
     ],
   },
   {
-    title: "Frontend",
-    skills: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-    ],
-  },
-  {
-    title: "Cloud",
-    skills: [
+    category: "Cloud & DevOps",
+    items: [
       "Azure",
       "AWS",
-      "Google Cloud",
-      "Azure AI",
+      "GCP",
+      "Docker",
+      "GitHub Actions",
+      "Git",
     ],
   },
   {
-    title: "AI / ML",
-    skills: [
-      "TensorFlow",
-      "OpenCV",
-      "MediaPipe",
-      "CNN",
-      "LLMs",
-      "RAG",
-    ],
-  },
-  {
-    title: "Databases",
-    skills: [
+    category: "Data & AI",
+    items: [
+      "Power BI",
       "SQL Server",
-      "MySQL",
-      "SQLite",
-      "Oracle",
+      "ETL",
+      "TensorFlow",
+      "Scikit-Learn",
+      "Pandas",
+      "NumPy",
     ],
   },
 ];

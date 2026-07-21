@@ -11,6 +11,7 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Credentials", href: "#credentials" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -28,6 +29,7 @@ export function Navbar() {
         "projects",
         "skills",
         "credentials",
+        "contact",
       ];
 
       for (const section of sections) {

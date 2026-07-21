@@ -1,48 +1,23 @@
-export interface CredentialSection {
-  title: string;
-  items: {
-    title: string;
-    subtitle: string;
-    year?: string;
-  }[];
-}
+export const credentials = {
+  education: [
+    {
+      degree: "Master of Science in Computer Science",
+      school: "University of Central Florida",
+      period: "2022 – 2024",
+      details: "GPA: 3.7/4.0",
+    },
+    {
+      degree: "Bachelor of Engineering in Computer Science",
+      school: "A.P. Shah Institute of Technology",
+      details: "Mumbai University",
+      period: "2018 – 2022",
+    },
+  ],
 
-export const credentialSections: CredentialSection[] = [
-  {
-    title: "Certifications",
-    items: [
-      {
-        title: "Microsoft Certified: Azure Administrator Associate",
-        subtitle: "Microsoft",
-      },
-      {
-        title: "Microsoft Certified: Azure AI Fundamentals",
-        subtitle: "Microsoft",
-      },
-      {
-        title: "Microsoft Certified: Power Platform Fundamentals",
-        subtitle: "Microsoft",
-      },
-      {
-        title: "Scrum Fundamentals Certified",
-        subtitle: "SCRUMstudy",
-      },
-    ],
-  },
-
-  {
-    title: "Education",
-    items: [
-      {
-        title: "M.S. Computer Science",
-        subtitle: "University of Central Florida",
-        year: "2022 – 2024",
-      },
-      {
-        title: "B.E. Computer Science",
-        subtitle: "Mumbai University",
-        year: "2018 – 2022",
-      },
-    ],
-  },
-];
+  certifications: [
+    "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+    "Scrum Fundamentals Certified",
+    "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+    "Microsoft Certified: Power Platform Fundamentals (PL-900)"
+  ],
+};
