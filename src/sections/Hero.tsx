@@ -108,13 +108,13 @@ export default function Hero() {
 
         {/* Right */}
 
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="relative flex justify-center lg:justify-center">
           <div className="absolute h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
 
           <img
             src={profileImage}
             alt={profile.name}
-            className="relative w-[380px] rounded-3xl border border-zinc-700 object-cover shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400"
+            className="relative w-[500px] rounded-3xl border border-zinc-700 object-cover shadow-2xl transition-all duration-500 lg:-translate-y-22 hover:lg:-translate-y-24 hover:border-cyan-400"
           />
         </div>
       </Container>
