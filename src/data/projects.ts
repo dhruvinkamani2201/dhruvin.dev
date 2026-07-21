@@ -1,57 +1,100 @@
-export interface Project {
-  title: string;
-  category: string;
-  description: string;
-  impact: string;
-  technologies: string[];
-  github?: string;
-  demo?: string;
-}
-
+import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
-    title: "APT – Your Personal Trainer",
-    category: "AI Computer Vision",
+    featured: true,
+    title: "Market Microstructure Simulator & Matching Engine",
     description:
-      "Built an AI-powered personal trainer that uses pose estimation to count repetitions and provide exercise feedback in real time.",
-    impact:
-      "Enabled users to perform workouts with automatic form tracking and rep counting without wearable devices.",
+      "A high-performance limit order book simulator implementing price-time priority matching, order execution, market replay, and liquidity analytics inspired by modern electronic exchanges.",
+
     technologies: [
       "Python",
-      "OpenCV",
-      "MediaPipe",
-      "TensorFlow",
+      "NumPy",
+      "Pandas",
+      "Order Book",
+      "Quant Finance",
     ],
-    github: "https://github.com/dhruvinkamani2201",
+
+    github:
+      "https://github.com/dhruvinkamani2201/Market-Microstructure-Simulator-Engine",
+
+    demo: "",
+    overview:
+    "Built a realistic electronic exchange simulator implementing a complete limit order book with price-time priority matching, market replay, execution analytics, and liquidity tracking.",
+
+    architecture:
+      "Python engine composed of an order book, matching engine, trade execution module, analytics layer, and market replay pipeline.",
+
+    challenges:
+      "Designing an efficient matching engine while preserving deterministic execution order and maintaining performance under high order volume.",
+
+    impact:
+      "Demonstrated knowledge of exchange infrastructure, quantitative finance, and low-latency system design.",
+
+    highlights: [
+      "Price-time priority matching engine",
+      "Limit order book simulation",
+      "Market replay & execution analytics",
+    ],
   },
 
   {
-    title: "Disney ETL Automation",
-    category: "Enterprise Data Engineering",
+    featured: false,
+    title: "Systematic Portfolio Risk Engine",
+
     description:
-      "Designed an automated ETL pipeline that transformed raw operational data into business-ready reports.",
-    impact:
-      "Reduced report generation time from two weeks to under one minute.",
+      "Portfolio analytics engine implementing PCA factor models, covariance estimation, portfolio optimization, and risk analysis.",
+
     technologies: [
-      ".NET",
-      "SQL Server",
-      "Power BI",
-      "Azure",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Finance",
     ],
+
+    github:
+      "https://github.com/dhruvinkamani2201/Systematic-Portfolio-Risk-Engine",
+
+    demo: "",
   },
 
   {
-    title: "Speech Emotion Recognition",
-    category: "Machine Learning",
+    featured: false,
+    title: "Pricing & Monte Carlo Engine",
+
     description:
-      "Developed a CNN model capable of identifying human emotions from speech audio.",
-    impact:
-      "Achieved 87.24% classification accuracy across multiple emotion classes.",
+      "Financial derivatives pricing engine implementing Black-Scholes, Monte Carlo simulation, Greeks, and option pricing.",
+
+    technologies: [
+      "Python",
+      "Monte Carlo",
+      "Finance",
+      "Mathematics",
+    ],
+
+    github:
+      "https://github.com/dhruvinkamani2201/Pricing-and-Monte-Carlo-Engine",
+
+    demo: "",
+  },
+
+  {
+    featured: false,
+    title: "Speech Emotion Recognizer",
+
+    description:
+      "Deep learning application using convolutional neural networks to classify emotions from speech with 87.24% validation accuracy.",
+
     technologies: [
       "Python",
       "TensorFlow",
       "CNN",
-      "Librosa",
+      "Deep Learning",
     ],
+
+    github:
+      "https://github.com/dhruvinkamani2201/Speech-Emotion-Recognizer",
+
+    demo: "",
   },
 ];
