@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 import { Container } from "../components/common/Container";
 import { SectionHeading } from "../components/common/SectionHeading";
 import ProjectCard from "../components/ui/ProjectCard";
+import ProjectModal from "../components/ui/ProjectModal";
+
 import { projects } from "../data/projects";
+import type { Project } from "../types/project";
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] =
+    useState<Project | null>(null);
+
   const featured = projects.find((p) => p.featured);
   const others = projects.filter((p) => !p.featured);
 
@@ -16,12 +24,15 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Projects"
           title="Featured Work"
-          description="A selection of engineering, quantitative finance, AI, and cloud projects."
+          description="A selection of engineering, quantitative finance, AI, cloud, and software development projects."
         />
 
         {featured && (
           <div className="mt-16">
-            <ProjectCard {...featured} />
+            <ProjectCard
+              project={featured}
+              onLearnMore={setSelectedProject}
+            />
           </div>
         )}
 
@@ -29,10 +40,16 @@ export default function Projects() {
           {others.map((project) => (
             <ProjectCard
               key={project.title}
-              {...project}
+              project={project}
+              onLearnMore={setSelectedProject}
             />
           ))}
         </div>
+
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
       </Container>
     </section>
   );

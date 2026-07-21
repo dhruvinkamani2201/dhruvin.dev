@@ -1,4 +1,4 @@
-import { FaGithub, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaGithub } from "react-icons/fa";
 import type { Project } from "../../types/project";
 
 interface ProjectCardProps {
@@ -7,12 +7,17 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  title,
-  description,
-  technologies,
-  github,
-  featured = false,
+  project,
+  onLearnMore,
 }: ProjectCardProps) {
+  const {
+    title,
+    description,
+    technologies,
+    github,
+    featured,
+  } = project;
+
   return (
     <div
       className={`group rounded-3xl border border-zinc-800 bg-zinc-900/60 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/50 ${
@@ -49,10 +54,13 @@ export default function ProjectCard({
           <span>Source</span>
         </a>
 
-        <span className="flex items-center gap-2 text-cyan-400">
+        <button
+          onClick={() => onLearnMore(project)}
+          className="flex items-center gap-2 text-cyan-400 transition hover:translate-x-1"
+        >
           Learn More
           <FaArrowRight className="text-sm" />
-        </span>
+        </button>
       </div>
     </div>
   );
