@@ -1,46 +1,57 @@
-import type { Experience } from "../../data/experience";
-
-interface Props {
-  experience: Experience;
+interface ExperienceCardProps {
+  period: string;
+  company: string;
+  employer: string;
+  role: string;
+  technologies: string[];
+  achievements: string[];
 }
 
-export function ExperienceCard({ experience }: Props) {
+export default function ExperienceCard({
+  period,
+  company,
+  employer,
+  role,
+  technologies,
+  achievements,
+}: ExperienceCardProps) {
   return (
-    <article className="rounded-2xl border border-zinc-800 bg-zinc-900 p-8">
-      <p className="text-sm uppercase tracking-widest text-cyan-400">
-        {experience.employer}
+    <div className="relative rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 transition-all duration-300 hover:border-cyan-500/50">
+      <p className="text-sm text-cyan-400">{period}</p>
+
+      <h3 className="mt-2 text-2xl font-semibold text-white">
+        {role}
+      </h3>
+
+      <p className="mt-1 text-zinc-300">
+        {company}
       </p>
 
-      {experience.client && (
-        <p className="mt-1 text-zinc-400">
-          Client: {experience.client}
+      {employer && (
+        <p className="text-sm text-zinc-500">
+          Contractor via {employer}
         </p>
       )}
 
-      <h3 className="mt-4 text-2xl font-bold text-white">
-        {experience.role}
-      </h3>
-
-      <p className="mt-2 text-zinc-400">
-        {experience.period} • {experience.location}
-      </p>
-
       <div className="mt-6 flex flex-wrap gap-2">
-        {experience.technologies.map((tech) => (
+        {technologies.map((tech) => (
           <span
             key={tech}
-            className="rounded-full border border-cyan-400/30 px-3 py-1 text-sm text-cyan-300"
+            className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <ul className="mt-6 list-disc space-y-2 pl-5 text-zinc-300">
-        {experience.achievements.map((achievement) => (
-          <li key={achievement}>{achievement}</li>
+      <ul className="mt-6 space-y-3 text-zinc-400">
+        {achievements.map((item) => (
+          <li key={item} className="flex gap-3">
+            <span className="mt-2 h-2 w-2 rounded-full bg-cyan-400" />
+            <span>{item}</span>
+          </li>
         ))}
       </ul>
-    </article>
+    </div>
   );
 }

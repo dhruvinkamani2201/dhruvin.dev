@@ -1,36 +1,26 @@
-import { Award, Building2, Clock3, Cloud } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-
-export interface Highlight {
-  title: string;
-  value: string;
-  subtitle: string;
-  icon: LucideIcon;
-}
-
-export const highlights: Highlight[] = [
+export const highlights = [
   {
-    title: "ETL Automation",
-    value: "2 Weeks → < 1 Minute",
-    subtitle: "Disney Reporting Platform",
-    icon: Clock3,
+    title: "Enterprise Software",
+    description:
+      "Delivered cloud-native applications for healthcare, insurance, and media organizations.",
+    icon: "🏢",
   },
   {
-    title: "Enterprise Clients",
-    value: "4",
-    subtitle: "Government & Fortune 500",
-    icon: Building2,
+    title: "Cloud Engineering",
+    description:
+      "Built scalable backend systems using Azure, AWS, serverless architecture, and modern APIs.",
+    icon: "☁️",
   },
   {
-    title: "Cloud Platforms",
-    value: "Azure • AWS • GCP",
-    subtitle: "Production Experience",
-    icon: Cloud,
+    title: "Data & AI",
+    description:
+      "Developed ETL pipelines, analytics dashboards, and AI-powered applications.",
+    icon: "📊",
   },
   {
-    title: "Microsoft Certifications",
-    value: "4",
-    subtitle: "Azure Administrator, AI & Power Platform",
-    icon: Award,
+    title: "Product Mindset",
+    description:
+      "Focused on automation, scalability, performance, and measurable business impact.",
+    icon: "🚀",
   },
 ];

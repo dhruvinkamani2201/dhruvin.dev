@@ -1,86 +1,50 @@
-export interface Experience {
-  employer: string;
-  client?: string;
-  role: string;
-  period: string;
-  location: string;
-  technologies: string[];
-  achievements: string[];
-  logo?: string;
-}
-
-export const experiences: Experience[] = [
+export const experience = [
   {
-    employer: "Softsmart Consulting",
-    client: "Department of Health Care Services",
-    role: "Software Engineer",
     period: "Sep 2025 – Mar 2026",
-    location: "Remote",
-    technologies: [
-      ".NET",
-      "SQL Server",
-      "Azure",
-      "PowerShell",
-      "SSIS",
-    ],
+    company: "Department of Health Care Services",
+    employer: "Softsmart Consulting",
+    role: "Senior Software Engineer",
+    technologies: [".NET", "Azure", "SQL Server", "Power BI"],
     achievements: [
-      "Developed enterprise healthcare software.",
-      "Automated reporting workflows.",
-      "Improved operational efficiency through backend enhancements.",
+      "Built enterprise healthcare applications serving state programs.",
+      "Designed scalable backend APIs and optimized database performance.",
+      "Collaborated with cross-functional teams to deliver production features.",
     ],
   },
   {
-    employer: "Softsmart Consulting",
-    client: "The Walt Disney Company",
-    role: "Software Engineer",
     period: "Mar 2025 – Sep 2025",
-    location: "Remote",
-    technologies: [
-      "C#",
-      ".NET",
-      "SQL",
-      "Power BI",
-    ],
-    achievements: [
-      "Reduced ETL reporting from two weeks to under one minute.",
-      "Built automated data pipelines.",
-      "Improved reporting accuracy.",
-    ],
-  },
-  {
+    company: "The Walt Disney Company",
     employer: "Softsmart Consulting",
-    client: "EMC Insurance",
     role: "Software Engineer",
-    period: "Oct 2024 – Mar 2025",
-    location: "Remote",
-    technologies: [
-      ".NET Core",
-      "C#",
-      "AWS Lambda",
-      "REST API",
-      "Guidewire",
-    ],
+    technologies: [".NET", "SQL", "ETL", "Power BI"],
     achievements: [
-      "Developed REST APIs.",
-      "Integrated Guidewire services.",
-      "Built cloud-native insurance workflows.",
+      "Built automated ETL pipelines reducing manual reporting from two weeks to under one minute.",
+      "Improved reporting accuracy through automated data validation.",
+      "Developed internal dashboards for business stakeholders.",
     ],
   },
   {
-    employer: "Arizona Beverages",
-    role: "Controls Engineering Intern",
-    period: "May 2023 – Aug 2023",
-    location: "New Jersey",
-    technologies: [
-      "Ignition",
-      "PLC",
-      "MES",
-      "SQL",
-    ],
+    period: "Oct 2024 – Mar 2025",
+    company: "EMC Insurance",
+    employer: "Softsmart Consulting",
+    role: "Software Engineer",
+    technologies: [".NET", "AWS Lambda", "REST API", "Guidewire"],
     achievements: [
-      "Designed HMI dashboards.",
-      "Integrated MES reporting.",
-      "Improved manufacturing visibility.",
+      "Developed REST APIs for the Quote & Buy insurance platform.",
+      "Integrated Guidewire with AWS serverless services.",
+      "Improved API performance and deployment reliability.",
+    ],
+  },
+  {
+    period: "May 2023 – Aug 2023",
+    company: "Arizona Beverage Company",
+    employer: "",
+    role: "Controls Engineering Intern",
+    technologies: ["Ignition", "MES", "SQL", "PLC"],
+    achievements: [
+      "Developed manufacturing dashboards and HMIs.",
+      "Integrated MES data with plant-floor systems.",
+      "Improved production monitoring and reporting.",
     ],
   },
 ];

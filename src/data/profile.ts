@@ -1,14 +1,15 @@
 export const profile = {
   name: "Dhruvin Kamani",
 
-  title: "Software Engineer",
+  title: "Software Engineer • Cloud • AI • Data",
+
+  headline:
+    "Building scalable backend systems, cloud-native applications, AI-powered software, and modern data platforms.",
 
   tagline:
-    "Building cloud-native software, AI-powered applications, and scalable data platforms.",
+    "Software Engineer with experience delivering enterprise applications across healthcare, insurance, and media industries using .NET, React, Azure, AWS, SQL, and modern cloud technologies.",
 
   location: "Mumbai, India",
-
-  availability: "Available for Full-Time Opportunities",
 
   email: "dhruvinkamani2201@gmail.com",
 

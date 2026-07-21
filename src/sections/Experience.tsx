@@ -1,25 +1,28 @@
 import { Container } from "../components/common/Container";
 import { SectionHeading } from "../components/common/SectionHeading";
-import { TimelineItem } from "../components/ui/TimelineItem";
-import { experiences } from "../data/experience";
+import ExperienceCard from "../components/ui/ExperienceCard";
+import { experience } from "../data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-28">
+    <section
+      id="experience"
+      className="bg-zinc-950 py-28"
+    >
       <Container>
         <SectionHeading
-          eyebrow="Career"
-          title="Professional Experience"
-          description="Building enterprise software across healthcare, entertainment, insurance, and manufacturing."
+          eyebrow="Experience"
+          title="Professional Journey"
+          description="Building enterprise software across healthcare, insurance, media, and manufacturing."
         />
 
-        <div className="mt-16">
-        {experiences.map((experience) => (
-            <TimelineItem
-            key={`${experience.employer}-${experience.client ?? experience.role}`}
-            experience={experience}
+        <div className="mt-16 space-y-8">
+          {experience.map((job) => (
+            <ExperienceCard
+              key={`${job.company}-${job.period}`}
+              {...job}
             />
-        ))}
+          ))}
         </div>
       </Container>
     </section>

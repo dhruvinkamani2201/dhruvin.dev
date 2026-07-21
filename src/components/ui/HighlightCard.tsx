@@ -1,41 +1,29 @@
-import type { Highlight } from "../../data/highlights";
+import type { FC } from "react";
 
 interface HighlightCardProps {
-  highlight: Highlight;
+  title: string;
+  description: string;
+  icon: string;
 }
 
-export function HighlightCard({
-  highlight,
-}: HighlightCardProps) {
-  const Icon = highlight.icon;
-
+const HighlightCard: FC<HighlightCardProps> = ({
+  title,
+  description,
+  icon,
+}) => {
   return (
-    <article
-      className="
-        rounded-2xl
-        border
-        border-zinc-800
-        bg-zinc-900
-        p-8
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:border-cyan-400
-      "
-    >
-      <Icon className="mb-6 h-8 w-8 text-cyan-400" />
+    <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/50 hover:bg-zinc-900">
+      <div className="mb-6 text-4xl">{icon}</div>
 
-      <h3 className="text-2xl font-bold text-white">
-        {highlight.value}
+      <h3 className="mb-3 text-xl font-semibold text-white">
+        {title}
       </h3>
 
-      <p className="mt-3 text-lg font-semibold text-white">
-        {highlight.title}
+      <p className="leading-7 text-zinc-400">
+        {description}
       </p>
-
-      <p className="mt-2 text-sm text-zinc-400">
-        {highlight.subtitle}
-      </p>
-    </article>
+    </div>
   );
-}
+};
+
+export default HighlightCard;

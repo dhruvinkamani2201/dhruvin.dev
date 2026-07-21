@@ -5,7 +5,7 @@ import { credentialSections } from "../data/credentials";
 
 export default function Credentials() {
   return (
-    <section className="py-28">
+    <section id="credentials" className="py-28">
       <Container>
         <SectionHeading
           eyebrow="Credentials"
